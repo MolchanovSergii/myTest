@@ -13,7 +13,7 @@
 // - Узнать, все ли ученые работали в 19 веке.
 
 const arr = [
-{ name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 },
+{ name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 }, 
 { name: "Isaac", surname: "Newton", born: 1643, dead: 1727, id: 2 },
 { name: "Galileo", surname: "Galilei", born: 1564, dead: 1642, id: 3 },
 { name: "Marie", surname: "Curie", born: 1867, dead: 1934, id: 4 },
@@ -27,3 +27,20 @@ const arr = [
 { name: "Lise", surname: "Meitner", born: 1878, dead: 1968, id: 12 },
 { name: "Hanna", surname: "Hammarström", born: 1829, dead: 1909, id: 13 }
 ];
+
+const bornYear = arr.filter(arr => arr.born >= 1800);
+console.log(bornYear);
+
+const sumYear = arr
+    .map(arr => arr.dead - arr.born)
+    .reduce((acc, arr) => {
+        return acc + arr;
+    }, 0)
+console.log(sumYear);
+
+const nameAlf = arr.sort((first, second) => first.surname.localeCompare(second.surname));
+console.log(nameAlf);
+
+// const valueYear = arr.map(arr => arr.life = arr.dead - arr.born);
+// console.log(valueYear);
+
